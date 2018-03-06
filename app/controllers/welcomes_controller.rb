@@ -1,7 +1,7 @@
 class WelcomesController < ApplicationController
 
 def index
-  @selections = @selections.all.order(:title)
-  @students = @students.all.order(:grad_year)
+  @selections = Selection.all
+  @students = Student.all
 end
 end

@@ -1,0 +1,30 @@
+<header>
+  <h1>DHS Contest Tracker</h1>
+</header>
+
+<header>
+  <h1><%= link_to(pluralize(@selections.size, "Selection"), selections_path) %><h1>
+  </header>
+
+
+  <% @selections.each do |selection| %>
+  <ul>
+    <li>
+      <%= link_to selection.title, selection %>
+      <%= selection.voicing %>
+    </li>
+  </ul>
+    <% end %>
+
+    <header>
+      <h1><%= link_to(pluralize(@students.size, 'Student'), students_path) %></h1>
+    </header>
+
+    <% @students.each do |student| %>
+    <ul>
+      <li>
+        <%= link_to(student.name, student) %>
+        <%= student.grad_year %>
+      </li>
+    </ul>
+    <% end %>
