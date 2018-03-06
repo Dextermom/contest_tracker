@@ -16,7 +16,7 @@ module ContestTracker
     # -- all .rb files in that directory are automatically loaded.
 
     console do
-      ActiveRecord::Base.connect
+      ActiveRecord::Base.connection
     end
   end
 end

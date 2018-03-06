@@ -1,0 +1,19 @@
+<header>
+  <h1><%= @selection.title %><h1>
+  </header>
+
+  <article>
+    <ul>
+      <li>Composer: <%= @selection.composer %></li>
+      <li>Publisher: <%=@selection.publisher %></li>
+      <li>Voicing: <%= @selection.voicing %></li>
+      <li>PML: <%= @selection.pml %></li>
+      <li>notes: <%= @selection.notes %></li>
+    </ul>
+  </article>
+
+  <footer>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Edit Selection', edit_selection_path(@selection) %>
+    <%= link_to 'Delete Selection', @selection, method: :delete, data: {confirm: 'Are you sure you want to permanently delete this selection?'} %>
+  </footer>

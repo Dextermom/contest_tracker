@@ -1,0 +1,18 @@
+<header>
+  <h1><%= pluralize(@selections.size, "Selection") %><h1>
+  </header>
+
+  <ul>
+    <% @selections.each do |selection| %>
+    <li>
+      <%= link_to selection.title, selection %>
+      <%= selection.voicing %>
+    </li>
+  </ul>
+    <% end %>
+
+
+
+<footer>
+  <%= link_to 'Add a Selection', new_selection_path %>
+</footer>

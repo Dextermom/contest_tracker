@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  composer: MyString
+  publisher: MyString
+  pml: MyString
+  voicing: MyString
+  notes: MyString
+
+two:
+  title: MyString
+  composer: MyString
+  publisher: MyString
+  pml: MyString
+  voicing: MyString
+  notes: MyString
