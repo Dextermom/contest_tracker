@@ -2,8 +2,9 @@
   <h1><%= pluralize(@selections.size, "Selection") %><h1>
   </header>
 
+
+  <% @selections.each do |selection| %>
   <ul>
-    <% @selections.each do |selection| %>
     <li>
       <%= link_to selection.title, selection %>
       <%= selection.voicing %>

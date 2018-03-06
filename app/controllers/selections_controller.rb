@@ -17,7 +17,7 @@ end
 def create
 @selection = Selection.new(selection_params)
 if @selection.save
-  redirect_to @selection
+  redirect_to @selection, notice: "Selection Added"
 else
   render :new
 end
@@ -45,6 +45,5 @@ end
 private
 def selection_params
   params.require(:selection).permit(:title, :composer, :publisher, :pml, :voicing, :notes)
-
 end
 end

@@ -1,0 +1,16 @@
+<header>
+  <h1><%= pluralize(@students.size, 'student') %></h1>
+</header>
+
+<% @students.each do |student| %>
+<ul>
+  <li>
+    <%= link_to(student.name, student) %>
+    <%= student.grad_year %>
+  </li>
+</ul>
+<% end %>
+
+<footer>
+  <%= link_to 'Add a Student', new_student_path %>
+</footer>

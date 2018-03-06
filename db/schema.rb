@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305232927) do
+ActiveRecord::Schema.define(version: 20180306012312) do
 
   create_table "selections", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20180305232927) do
     t.string "pml"
     t.string "voicing"
     t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "name"
+    t.string "grad_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "welcomes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,13 @@
+<header>
+  <h1><%= @student.name %></h1>
+</header>
+
+  <ul>
+    <li><%=@student.grad_year %></li>
+  </ul>
+
+  <footer>
+    <%= link_to 'All Students', students_path %>
+    <%= link_to 'Edit Student', edit_student_path(@student) %>
+    <%= link_to 'Delete Student', @student, method: :delete, data: {confirm: 'Are you sure you want to permanently delete this student?'} %>
+  </footer>

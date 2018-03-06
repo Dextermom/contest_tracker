@@ -1,0 +1,18 @@
+<%= form_for(@student) do |f| %>
+<%= @student.errors.full_messages.to_sentence %>
+<p>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :grad_year %><br/>
+  <%= f.text_field :grad_year %>
+</p>
+
+<p>
+  <%= f.submit %>
+  <%= link_to 'Cancel', students_path %>
+</p>
+
+<% end %>
