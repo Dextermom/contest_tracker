@@ -13,7 +13,8 @@
   </article>
 
   <footer>
-    <%= link_to 'Home', root_path %>
+    <%= link_to 'Home Page', root_path %>
+    <%= link_to 'All Selections', selections_path %>
     <%= link_to 'Edit Selection', edit_selection_path(@selection) %>
     <%= link_to 'Delete Selection', @selection, method: :delete, data: {confirm: 'Are you sure you want to permanently delete this selection?'} %>
   </footer>
