@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  selection: one
+  year: MyString
+
+two:
+  student: two
+  selection: two
+  year: MyString

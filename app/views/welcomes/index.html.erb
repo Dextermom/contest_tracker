@@ -27,4 +27,14 @@
         <%= student.grad_year %>
       </li>
     </ul>
+
     <% end %>
+
+    <header>
+      <h1><%= pluralize(@entries.size, 'Entry') %></h1>
+    </header>
+
+    <footer>
+      <%= link_to 'Add a Selection', new_selection_path %>
+      <%= link_to 'Add a Student', new_student_path %>
+    </footer>

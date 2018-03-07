@@ -1,0 +1,15 @@
+<%= form_for(@entry) do |f| %>
+<%= @entry.errors.full_messages.to_sentence %>
+
+<p>
+  <%= f.label :year %><br/>
+  <%= f.text_field :year, size: 6 %>
+</p>
+<p>
+  <%= f.label :selection %>
+  <%= f.collection_select(:selection, Selection.all, :id, :title) %>
+</p>
+<p>
+  <%= f.collection_select(:student, Student.all, :id, :name) %>
+  <%= f.submit %>
+<% end %>
