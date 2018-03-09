@@ -5,7 +5,7 @@
   <% @entries.each do |entry| %>
   <ul>
     <li>
-      Name: <%= entry.name %>
+      Name: <%= link_to entry.name, entry %>
     </li>
     <li>
       Year: <%= entry.year%>
@@ -22,4 +22,5 @@
 
   <footer>
     <%= link_to 'Home Page', root_path %>
+    <%= link_to 'Add an Entry', new_entry_path %>
   </footer>

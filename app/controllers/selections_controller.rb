@@ -7,7 +7,7 @@ end
 
 def show
 @selection = Selection.find(params[:id])
-
+@entries = @selection.students
 end
 
 def new

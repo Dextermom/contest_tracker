@@ -1,1 +1,24 @@
+<header>
+  <h1><%= @entry.name %></h1>
+</header>
 
+<ul>
+  <li>
+    Name: <%= @entry.name %>
+  </li>
+  <li>
+    Year: <%= @entry.year%>
+  </li>
+  <li>
+    Selection: <%= @entry.selection.title %>
+  </li>
+  <li>
+    Student: <%= @entry.student.name %>
+  </li>
+</ul>
+
+<footer>
+  <%= link_to 'Edit Entry', edit_entry_path %>
+  <%= link_to 'Delete Entry', @entry, method: :delete, data: {confirm: "Are you sure you want to permanently delete this entry?"} %>
+  <%= link_to 'Home Page', root_path %>
+</footer>

@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
   end
 
   def show
-
+    @entry = Entry.find(params[:id])
   end
 
   def new
@@ -24,15 +24,24 @@ class EntriesController < ApplicationController
   end
 
   def edit
-
+    @entry = Entry.find(params[:id])
+    @selection = Selection.all
+    @student = Student.all
   end
 
   def update
-
+    @entry = Entry.find(params[:id])
+      if @entry.update(selection_params)
+        redirect_to @entry, notice: "Entry successfully updated!"
+      else
+        render :edit
+      end
   end
 
   def destroy
-
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+    redirect_to root_url, alert: "Entry successfully deleted!"
   end
 
   private
