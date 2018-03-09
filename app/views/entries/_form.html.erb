@@ -1,15 +1,28 @@
 <%= form_for(@entry) do |f| %>
 <%= @entry.errors.full_messages.to_sentence %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
 
 <p>
-  <%= f.label :year %><br/>
-  <%= f.text_field :year, size: 6 %>
+  <%= f.label :year %>
+  <%= f.text_field :year, size: 8 %>
 </p>
+
 <p>
   <%= f.label :selection %>
-  <%= f.collection_select(:selection, Selection.all, :id, :title) %>
+  <%= f.collection_select(:selection_id, @selection, :id, :title) %>
 </p>
+
 <p>
-  <%= f.collection_select(:student, Student.all, :id, :name) %>
+  <%= f.label :student %>
+  <%= f.collection_select(:student_id, @student, :id, :name) %>
+</p>
+
+<p>
   <%= f.submit %>
+  <%= link_to 'Cancel', entries_path %>
+</p>
+
 <% end %>

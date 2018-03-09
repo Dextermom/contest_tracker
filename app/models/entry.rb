@@ -1,4 +1,4 @@
 class Entry < ApplicationRecord
-  belongs_to :student
-  belongs_to :selection
+  belongs_to :student, optional: true
+  belongs_to :selection, optional: true
 end

@@ -1,23 +1,25 @@
 <header>
-  <h1><%= pluralize(@entries.size, "Entry") %><h1>
-  </header>
-
+  <h1><%= pluralize(@entries.size, 'Entry') %></h1>
+</header>
 
   <% @entries.each do |entry| %>
   <ul>
     <li>
-      <%= link_to entry.selection.title, selection_path %>
-      <%= entry.selection.voicing %>
+      Name: <%= entry.name %>
     </li>
     <li>
-      <%= link_to entry.student.name, student_path %>
-      <li>
+      Year: <%= entry.year%>
+    </li>
+    <li>
+      Selection: <%= entry.selection.title %>
+    </li>
+    <li>
+      Student: <%= entry.student.name %>
+    </li>
   </ul>
-    <% end %>
 
+  <% end %>
 
-
-<footer>
-  <%= link_to 'Home page', root_path %>
-  <%= link_to 'Add an Entry', new_entry_path %>
-</footer>
+  <footer>
+    <%= link_to 'Home Page', root_path %>
+  </footer>

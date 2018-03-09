@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   def index
+    @entries = Entry.all.order(:name)
 
   end
 
@@ -8,13 +9,18 @@ class EntriesController < ApplicationController
   end
 
   def new
-
+    @entry = Entry.new
+    @selection = Selection.all
+    @student = Student.all
   end
 
   def create
-  @selection = Selection.find(params[:selection_id])
-  @selection.entries.create!
-  redirect_to @selection, notice: "Student added"
+    @entry = Entry.new(entry_params)
+    if @entry.save
+      redirect_to entries_path, notice: "Entry Added"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -31,6 +37,6 @@ class EntriesController < ApplicationController
 
   private
   def entry_params
-
+    params.require(:entry).permit(:name, :student_id, :selection_id, :year)
   end
   end

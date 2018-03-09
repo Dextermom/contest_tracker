@@ -31,7 +31,7 @@
     <% end %>
 
     <header>
-      <h1><%= pluralize(@entries.size, 'Entry') %></h1>
+      <h1><%= link_to pluralize(@entries.size, 'Entry'), entries_path %></h1>
     </header>
 
     <footer>
