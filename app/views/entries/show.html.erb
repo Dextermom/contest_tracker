@@ -1,21 +1,20 @@
-<header>
-  <h1><%= @entry.name %></h1>
+<header id="page-header">
+  <h1>
+    <%= @entry.name %><br/>
+    <%= @entry.student.name %>
+  </h1>
 </header>
 
+<div>
 <ul>
-  <li>
-    Name: <%= @entry.name %>
-  </li>
   <li>
     Year: <%= @entry.year%>
   </li>
   <li>
     Selection: <%= @entry.selection.title %>
   </li>
-  <li>
-    Student: <%= @entry.student.name %>
-  </li>
 </ul>
+</div>
 
 <footer>
   <%= link_to 'Edit Entry', edit_entry_path %>

@@ -31,7 +31,7 @@ class EntriesController < ApplicationController
 
   def update
     @entry = Entry.find(params[:id])
-      if @entry.update(selection_params)
+      if @entry.update(entry_params)
         redirect_to @entry, notice: "Entry successfully updated!"
       else
         render :edit

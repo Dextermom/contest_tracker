@@ -1,5 +1,6 @@
 <%= form_for(@entry) do |f| %>
 <%= @entry.errors.full_messages.to_sentence %>
+<fieldset>
 <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -19,8 +20,9 @@
   <%= f.label :student %>
   <%= f.collection_select(:student_id, @student, :id, :name) %>
 </p>
+</fieldset>
 
-<p>
+<p id="form-button">
   <%= f.submit %>
   <%= link_to 'Cancel', entries_path %>
 </p>

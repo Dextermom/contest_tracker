@@ -1,8 +1,8 @@
-<header>
+<header id="page-header">
   <h1><%= @selection.title %><h1>
-  </header>
+</header>
 
-  <article>
+  <div id="showpage">
     <ul>
       <li>Composer: <%= @selection.composer %></li>
       <li>Publisher: <%=@selection.publisher %></li>
@@ -10,17 +10,20 @@
       <li>PML: <%= @selection.pml %></li>
       <li>notes: <%= @selection.notes %></li>
     </ul>
-  </article>
+  </div>
 
+  <div id="if">
   <% if @entries.any? %>
     <h3>Students</h3>
     <ul>
       <% @entries.each do |student| %>
-      <li> <%= link_to student.name, student %> <%= student.grad_year %>
+      <li>
+        <%= link_to student.name, student %> <%= student.grad_year %>
       </li>
       <% end %>
     </ul>
-  <% end %>
+    <% end %>
+  </div>
 
   <footer>
     <%= link_to 'Home Page', root_path %>

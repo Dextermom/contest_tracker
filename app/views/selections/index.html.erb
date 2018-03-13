@@ -1,17 +1,17 @@
-<header>
+<header id="page-header">
   <h1><%= pluralize(@selections.size, "Selection") %><h1>
-  </header>
+</header>
 
-
+<div>
   <% @selections.each do |selection| %>
   <ul>
     <li>
-      <%= link_to selection.title, selection %>
+      <%= link_to selection.title, selection %><br/>
       <%= selection.voicing %>
     </li>
   </ul>
     <% end %>
-
+</div>
 
 
 <footer>

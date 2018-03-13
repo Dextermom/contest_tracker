@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all.order(:grad_year)
+    @students = Student.order(:grad_year)
 
   end
 
@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
   def update
   @student = Student.find(params[:id])
     if @student.update(student_params)
-      redirect_to @student, notice: "Student successfully updated!"
+      redirect_to students_path, notice: "Student successfully updated!"
     else
       render :edit
     end

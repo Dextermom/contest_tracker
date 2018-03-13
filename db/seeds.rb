@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+students = Student.create!([{
+    name: "Jane Doe",
+    grad_year:"2018"
+  },
+  {
+    name: "John Doe",
+    grad_year: "2020"
+  }])
+
+selections = Selection.create!([{
+    title: "Come Again, Sweet Love!",
+    pml: "936",
+    composer: "Dowland"
+  },
+  {
+    title: "Sing Me to Heaven",
+    pml: "245",
+    composer: "Gwathrop"
+    }])

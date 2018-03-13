@@ -1,11 +1,13 @@
-<header>
+<header id="page-header">
   <h1><%= @student.name %></h1>
-</header>
+
 
   <ul>
     <li><%=@student.grad_year %></li>
   </ul>
+  </header>
 
+<div>
 <% if @entries.any? %>
   <h3>Selections</h3>
   <ul>
@@ -15,7 +17,7 @@
     <% end %>
   </ul>
 <% end %>
-
+</div>
 
   <footer>
     <%= link_to 'Home page', root_path %>

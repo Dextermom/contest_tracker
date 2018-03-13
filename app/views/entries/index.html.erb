@@ -1,7 +1,8 @@
-<header>
+<header id="page-header">
   <h1><%= pluralize(@entries.size, 'Entry') %></h1>
 </header>
 
+<div>
   <% @entries.each do |entry| %>
   <ul>
     <li>
@@ -19,6 +20,7 @@
   </ul>
 
   <% end %>
+</div>
 
   <footer>
     <%= link_to 'Home Page', root_path %>

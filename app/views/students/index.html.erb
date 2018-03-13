@@ -1,7 +1,8 @@
-<header>
+<header id="page-header">
   <h1><%= pluralize(@students.size, "Student") %><h1>
 </header>
 
+<div>
 <% @students.each do |student| %>
 <ul>
   <li>
@@ -10,6 +11,10 @@
   </li>
 </ul>
 <% end %>
+</div>
+
+
+
 
 <footer>
   <%= link_to 'Home Page', root_path %>
